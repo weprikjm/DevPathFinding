@@ -205,6 +205,7 @@ int j1PathFinding::CreatePath(const iPoint& origin, const iPoint& destination)
 
 				if (adjacents.list.At(i)->data.pos.DistanceManhattan(destination) == 0)
 				{
+					closed.list.add(adjacents.list.At(i)->data);
 					isfinish = true;
 					break;
 				}
